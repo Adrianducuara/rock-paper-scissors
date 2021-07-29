@@ -1,9 +1,11 @@
 :root {
-    --color-background: #080808;
+    --color-background: #53B8BB;
     --color-white: #fff;
     --color-purple: purple;
-    --color-orange: orange;
+    --color-orange: #53B8BB;
     --color-yellow: yellow;
+    --color-button: #055052;
+    --color-text-dark: #343A40;
 }
 * {
     margin: 0px;
@@ -12,6 +14,7 @@
 }
 html {
     font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 header {
     width: 100%;
@@ -37,20 +40,6 @@ main {
     align-items: center;
     padding: 20px;
 }
-.container-alert {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    width: 100%;
-    display: flex;
-    background-color: red;
-}
-.alert {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background-color: var(--color-white)
-}
 .box {
     width: 30%;
     height: 150px;
@@ -73,9 +62,25 @@ main {
 .scissor {
     background-color: var(--color-yellow);
 }
-.container-tie {
+.container-alert {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+}
+.alert {
+    position: absolute;
+    padding: 25px;
     text-align: center;
-    color: lawngreen;
-    font-weight: bold;
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 4px -2px #000;
+    border-radius: 5px;
+}
+.hidden {
+    visibility: hidden;
 }
