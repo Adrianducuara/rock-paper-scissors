@@ -54,7 +54,7 @@ function main(selectMachine, selectUser) {
         pointUser += 1
         renderPoint(pointUserTag, pointUser)
     } else {
-        console.log("None point")
+        alert("Wow, Empatados!!")
     }
 }
 function renderPoint(tagHTML, points) {
