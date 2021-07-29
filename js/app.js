@@ -3,7 +3,7 @@
 const targets = document.querySelectorAll(".box")
 const pointUserTag = document.querySelector("#point-user")
 const pointMachineTag = document.querySelector("#point-machine")
-
+const tieUser = document.querySelector("#tie-user")
 let pointMachine = 0
 let pointUser = 0
 
@@ -37,24 +37,43 @@ function attackSelectMachine() {
 function main(selectMachine, selectUser) {
     if(selectMachine == 0 && selectUser == 1) {
         pointUser += 1
+        if(tieUser.textContent != ""){
+            tieUser.innerText = ""
+        }
         renderPoint(pointUserTag, pointUser)
+
     } else if(selectMachine == 1 && selectUser == 0) {
         pointMachine += 1
+        if(tieUser.textContent != ""){
+            tieUser.innerText = ""
+        }
         renderPoint(pointMachineTag, pointMachine)
     } else if(selectMachine == 2 && selectUser == 1) {
         pointMachine += 1
+        if(tieUser.textContent != ""){
+            tieUser.innerText = ""
+        }
         renderPoint(pointMachineTag, pointMachine)
     } else if(selectMachine == 1 && selectUser == 2) {
         pointUser += 1
+        if(tieUser.textContent != ""){
+            tieUser.innerText = ""
+        }
         renderPoint(pointUserTag, pointUser)
     } else if(selectMachine == 0 && selectUser == 2) {
         pointMachine += 1
+        if(tieUser.textContent != ""){
+            tieUser.innerText = ""
+        }
         renderPoint(pointMachineTag, pointMachine)
     } else if(selectMachine == 2 && selectUser == 0) {
         pointUser += 1
+        if(tieUser.textContent != ""){
+            tieUser.innerText = ""
+        }
         renderPoint(pointUserTag, pointUser)
     } else {
-        alert("Wow, Empatados!!")
+        renderPoint(tieUser, "Wow, Empatados!!")
     }
 }
 function renderPoint(tagHTML, points) {

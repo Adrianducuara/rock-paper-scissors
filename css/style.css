@@ -31,12 +31,25 @@ header div span {
 }
 main {
     width: 100%;
-    height: 100vh;
     min-width: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+.container-alert {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    background-color: red;
+}
+.alert {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: var(--color-white)
 }
 .box {
     width: 30%;
@@ -59,4 +72,10 @@ main {
 }
 .scissor {
     background-color: var(--color-yellow);
+}
+.container-tie {
+    width: 100%;
+    text-align: center;
+    color: lawngreen;
+    font-weight: bold;
 }
